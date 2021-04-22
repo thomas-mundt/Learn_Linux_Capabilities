@@ -14,3 +14,14 @@ getpcaps <ID>
 
 ```
 
+## In Kubernetes
+
+```
+image: nginx
+...
+securityContext:
+  capabilities:
+    add: ["SYS_TIME"]
+    drop: ["CHOWN"]
+```
+
